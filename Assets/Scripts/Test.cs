@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    [Label] [SerializeField] private float exampleLabel = 3.14159f;
-    
-    [Button]
-    public void TestMethod ()
-    {
-        Debug.Log("TEST");
-    }
+    [Label]
+    [SerializeField] private float exampleLabel = 3.14159f;
 
-    [Button]
-    public bool TestParameter( bool flag, string str)
-    {
-        Debug.Log(str + ": " + flag);
-        return flag;
-    }
-    
+    [EditableScriptableObject]
+    [SerializeField] TestScriptableObject scriptableObject;
+    [EditableScriptableObject]
+    [SerializeField] TestScriptableObject scriptableObject2;
+
+    [EditableScriptableObject]
+    [SerializeField] TestScriptableObject scriptableObject3;
+
+    [SerializeField] float lateField;
 }
